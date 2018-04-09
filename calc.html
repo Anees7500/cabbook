@@ -1,0 +1,96 @@
+<html>
+
+<head>
+
+	<title>Anees Sk</title>
+	<style>
+		.calc {
+			position: relative;
+			top: 10px;
+			width: 280px;
+			border: 1px solid black;
+			text-align: center;
+			background-color: White;
+		}
+
+		#textbox {
+			text-align: right;
+			height: 40px;
+			width: 260px;
+			margin-bottom: 2px;
+			border: 2px solid black;
+			font-size: 30px;
+			background-color: pink;
+		}
+
+		.calc img {
+			cursor: pointer;
+			width: 60px;
+			height: 60px;
+			margin: 2px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<script>
+		function enternumber(number) {
+			var t1 = document.getElementById("textbox");
+			t1.value = t1.value + number;
+		}
+
+
+		function ce() {
+			var t1 = document.getElementById("textbox");
+			t1.value = "";
+		}
+
+
+		function bspc() {
+			var t1 = document.getElementById("textbox");
+			t1.value = t1.value.slice(0, t1.value.length - 1);
+		}
+
+	</script>
+
+	<div class="calc">
+		<strong style="font-size: 30px;color:Green;">My Calculator</strong>&nbsp;<b style="color:Black;"><sub>ANEES@SK</sub></b>
+		<hr/>
+
+		<input id="textbox" type="text" autocomplete="off" autofocus onkeypress="if (event.keyCode == 13)
+	textbox.value=eval(textbox.value)">
+
+
+		<br/>
+
+		<img src="calc/clean.jpg" onclick="ce()" />
+		<img src="calc/left.jpg" onclick="enternumber('(')" />
+		<img src="calc/right.jpg" onclick="enternumber(')')" />
+		<img src="calc/back.jpg" onclick="bspc()" /><br/>
+
+		<!-- <button value="9" onclick="enternumber(this)"> -->
+		<img src="calc/7.jpg" onclick="enternumber(7)" />
+		<img src="calc/8.jpg" onclick="enternumber(8)" />
+		<img src="calc/9.jpg" onclick="enternumber(9)" />
+		<img src="calc/d.jpg" onclick="enternumber('/')" /><br/>
+
+		<img src="calc/4.jpg" onclick="enternumber(4)" />
+		<img src="calc/5.jpg" onclick="enternumber(5)" />
+		<img src="calc/6.jpg" onclick="enternumber(6)" />
+		<img src="calc/m.jpg" onclick="enternumber('*')" /><br/>
+
+		<img src="calc/1.jpg" onclick="enternumber(1)" />
+		<img src="calc/2.jpg" onclick="enternumber(2)" />
+		<img src="calc/3.jpg" onclick="enternumber(3)" />
+		<img src="calc/s.jpg" onclick="enternumber('-')" /><br/>
+
+		<img src="calc/dot.jpg" onclick="enternumber('.')" />
+		<img src="calc/zero.jpg" onclick="enternumber(0)" />
+		<img src="calc/e.jpg" onclick="textbox.value=eval(textbox.value)" />
+		<img src="calc/a.jpg" onclick="enternumber('+')" /><br/>
+	</div>
+
+</body>
+
+</html>
